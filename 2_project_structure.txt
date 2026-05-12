@@ -1,6 +1,6 @@
 ==============================================================================================================
 PROJECT STRUCTURE: AI-Notes-Automation
-GENERATED: 2026-05-12 11:33:35
+GENERATED: 2026-05-12 13:14:57
 ==============================================================================================================
 
 AI-Notes-Automation/
@@ -56394,7 +56394,8 @@ AI-Notes-Automation/
 │   │   │   └── link_lists.bin
 │   │   └── chroma.sqlite3
 │   ├── notes/
-│   └── uploads/
+│   ├── uploads/
+│   └── notes.db
 ├── models/
 │   └── all-MiniLM-L6-v2/
 │       ├── 1_Pooling/
@@ -56412,7 +56413,9 @@ AI-Notes-Automation/
 │   └── experimentation.ipynb
 ├── .env
 ├── .gitignore
+├── 1_code.txt
 ├── 2_project_structure.txt
+├── create_db.py
 ├── create_structure.py
 ├── download_model.py
 ├── LICENSE

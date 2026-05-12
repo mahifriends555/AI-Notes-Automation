@@ -27,3 +27,24 @@ def create_note(
     db.refresh(new_note)
 
     return new_note
+
+def get_note_by_id(
+    db: Session,
+    note_id: int
+):
+    """
+    Fetch single note by ID.
+    """
+
+    return db.query(Note).filter(
+        Note.id == note_id
+    ).first()
+
+def get_all_notes(
+    db: Session
+):
+    """
+    Fetch all notes.
+    """
+
+    return db.query(Note).all()
