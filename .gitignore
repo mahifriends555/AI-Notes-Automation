@@ -69,4 +69,27 @@ build/
 create_structure.py
 
 
+# Virtual Environment
+agentic/
 
+# Python Cache
+__pycache__/
+*.pyc
+
+# Environment Variables
+.env
+
+# ChromaDB
+data/chroma_db/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Mac/Linux
+.DS_Store
+
+# Logs
+*.log
