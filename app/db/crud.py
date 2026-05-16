@@ -1,32 +1,57 @@
 
 from sqlalchemy.orm import Session
-
 from app.db.models import Note
 
+# def create_note(
+#     db: Session,
+#     title: str,
+#     content: str,
+#     tags: str = None
+# ):
+#     """
+#     Create and save a new note.
+#     """
+
+#     new_note = Note(
+#         title=title,
+#         content=content,
+#         tags=tags
+#     )
+
+#     db.add(new_note)
+
+#     db.commit()
+
+#     db.refresh(new_note)
+
+#     return new_note
 
 def create_note(
     db: Session,
     title: str,
     content: str,
-    tags: str = None
+    tags: str = None,
+    source: str = None,
+    topic: str = None,
+    importance: float = 0.5
 ):
-    """
-    Create and save a new note.
-    """
-
+    """Create note with metadata"""
+    
     new_note = Note(
         title=title,
         content=content,
-        tags=tags
+        tags=tags,
+        source=source,
+        topic=topic,
+        importance=importance
     )
-
+    
     db.add(new_note)
-
     db.commit()
-
     db.refresh(new_note)
-
+    
     return new_note
+
 
 def get_note_by_id(
     db: Session,
