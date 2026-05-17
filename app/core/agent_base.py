@@ -33,8 +33,8 @@ class Agent:
         """
         Agent uses a tool
         """
-        if tool_name not in self.tools:
-            return {"error": f"Tool {tool_name} not found"}
+        # if tool_name not in self.tools:
+        #     return {"error": f"Tool {tool_name} not found"}
         
         tool = self.tools[tool_name]
         result = tool(**params)
