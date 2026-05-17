@@ -117,14 +117,5 @@ class IngestionAgent(Agent):
             "user_input": user_text
         }
     
-    def get_status(self):
-        """
-        Return agent's current status
-        """
-        return {
-            "name": self.name,
-            "role": self.role,
-            "memory": self.memory,
-            "total_actions": len(self.memory)
-        }
+
     
